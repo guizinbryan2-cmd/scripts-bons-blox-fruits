@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scripts bons para blox fruits</title>
+
+    <style>
+        body {
+            background-color: #0b4fd6;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        .script-box {
+            background-color: #0a3fa8;
+            border-radius: 10px;
+            padding: 15px;
+            max-width: 900px;
+            margin: auto;
+            text-align: left;
+            overflow-x: auto;
+            white-space: pre;
+            font-size: 14px;
+        }
+
+        .copy-btn {
+            margin-top: 15px;
+            padding: 10px 25px;
+            background-color: #111;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .copy-btn:hover {
+            background-color: #000;
+        }
+
+        .game-img {
+            margin-top: 30px;
+            width: 220px;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Scripts bons para blox fruits</h1>
+    <h2>Script Blox Fruits Auto Bounty 👇</h2>
+
+    <div class="script-box" id="scriptText">
+repeat wait() until game:IsLoaded()
+
+getgenv().Setting = {
+    ["Team"] = "Pirates",
+    ["Chat"] = {},
+    ["Skip Race V4"] = true,
+
+    ["Melee"] = {
+        ["Enable"] = true,
+        ["Z"] = {["Enable"] = true, ["HoldTime"] = 0.1},
+        ["X"] = {["Enable"] = true, ["HoldTime"] = 0.1},
+        ["C"] = {["Enable"] = true, ["HoldTime"] = 0.1},
+        ["Delay"] = 1.5
+    },
+
+    ["Sword"] = {
+        ["Enable"] = true,
+        ["Z"] = {["Enable"] = true, ["HoldTime"] = 0.1},
+        ["X"] = {["Enable"] = true, ["HoldTime"] = 0.1},
+        ["Delay"] = 1
+    },
+
+    ["Gun"] = {
+        ["Enable"] = true,
+        ["Z"] = {["Enable"] = true, ["HoldTime"] = 0.1},
+        ["X"] = {["Enable"] = true, ["HoldTime"] = 0.1},
+        ["Delay"] = 1,
+        ["GunMode"] = false
+    },
+
+    ["Fruit"] = {
+        ["Enable"] = true,
+        ["Z"] = {["Enable"] = true, ["HoldTime"] = 0.1},
+        ["X"] = {["Enable"] = true, ["HoldTime"] = 0.1},
+        ["C"] = {["Enable"] = true, ["HoldTime"] = 0.1},
+        ["V"] = {["Enable"] = true, ["HoldTime"] = 0.1},
+        ["F"] = {["Enable"] = false, ["HoldTime"] = 0.1},
+        ["Delay"] = 1
+    },
+
+    ["Hunt"] = {
+        ["Min"] = 0,
+        ["Max"] = 30000000
+    },
+
+    ["Skip"] = {
+        ["Fruit"] = false,
+        ["FruitList"] = {"Buddha", "Leopard", "T-Rex"},
+        ["SafeZone"] = true,
+        ["NoHaki"] = true,
+        ["NoPvP"] = true
+    },
+
+    ["SafeHealth"] = {
+        ["Health"] = 4700,
+        ["Mask"] = false,
+        ["MaskType"] = "Mask",
+        ["RaceV4"] = false
+    },
+
+    ["Another"] = {
+        ["V3"] = true,
+        ["V4"] = true,
+        ["CustomHealth"] = true,
+        ["Health"] = 4700,
+        ["WhiteScreen"] = false,
+        ["FPSBoots"] = false,
+        ["AutoServerHop"] = true,
+        ["HopWhenNoBounty"] = true,
+        ["BountyLock"] = false,
+        ["BountyLockAt"] = 30000000,
+        ["ServerHopAfterTime"] = false,
+        ["ServerHopTime"] = 900,
+        ["CheckCombatBeforeHop"] = true,
+        ["MaxPlayersInServer"] = 8
+    },
+
+    ["Webhook"] = {
+        ["Enabled"] = true,
+        ["Url"] = ""
+    }
+}
+
+loadstring(game:HttpGet(
+    "https://raw.githubusercontent.com/shinichi-dz/phucshinsayhi/refs/heads/main/AutoBounty.lua"
+))()
+    </div>
+
+    <button class="copy-btn" onclick="copyScript()">Copy</button>
+
+    <br>
+
+    <img class="game-img"
+         src="https://i.imgur.com/7yUvePI.png"
+         alt="Blox Fruits">
+
+    <script>
+        function copyScript() {
+            const text = document.getElementById("scriptText").innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                alert("Script copiado com sucesso!");
+            });
+        }
+    </script>
+
+</body>
+</html>
