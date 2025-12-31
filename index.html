@@ -54,137 +54,143 @@ img {
 
 <!-- ================= AUTO BOUNTY ================= -->
 <h2>Auto Bounty</h2>
-
 <div class="script-box" id="script1">
 repeat wait() until game:IsLoaded()
 getgenv().Setting = {
     ["Team"] = "Pirates",
     ["Chat"] = {},
     ["Skip Race V4"] = true,
-
-    ["Melee"] = {["Enable"] = true},
-    ["Sword"] = {["Enable"] = true},
-    ["Gun"] = {["Enable"] = true},
-    ["Fruit"] = {["Enable"] = true},
-
-    ["Another"] = {
-        ["V3"] = true,
-        ["V4"] = true,
-        ["AutoServerHop"] = true
-    }
+    ["Melee"] = {["Enable"] = true, ["Z"] = {["Enable"] = true, ["HoldTime"] = 0.1}, ["X"] = {["Enable"] = true, ["HoldTime"] = 0.1}, ["C"] = {["Enable"] = true, ["HoldTime"] = 0.1}, ["Delay"] = 1.5},
+    ["Sword"] = {["Enable"] = true, ["Z"] = {["Enable"] = true, ["HoldTime"] = 0.1}, ["X"] = {["Enable"] = true, ["HoldTime"] = 0.1}, ["Delay"] = 1},
+    ["Gun"] = {["Enable"] = true, ["Z"] = {["Enable"] = true, ["HoldTime"] = 0.1}, ["X"] = {["Enable"] = true, ["HoldTime"] = 0.1}, ["Delay"] = 1, ["GunMode"] = false},
+    ["Fruit"] = {["Enable"] = true, ["Z"] = {["Enable"] = true, ["HoldTime"] = 0.1}, ["X"] = {["Enable"] = true, ["HoldTime"] = 0.1}, ["C"] = {["Enable"] = true, ["HoldTime"] = 0.1}, ["V"] = {["Enable"] = true, ["HoldTime"] = 0.1}, ["F"] = {["Enable"] = false, ["HoldTime"] = 0.1}, ["Delay"] = 1},
+    ["Hunt"] = {["Min"] = 0, ["Max"] = 30000000},
+    ["Skip"] = {["Fruit"] = false, ["FruitList"] = {"Buddha","Leopard","T-Rex"}, ["SafeZone"] = true, ["NoHaki"] = true, ["NoPvP"] = true},
+    ["SafeHealth"] = {["Health"] = 4700, ["Mask"] = false, ["MaskType"] = "Mask", ["RaceV4"] = false},
+    ["Another"] = {["V3"] = true, ["V4"] = true, ["CustomHealth"] = true, ["Health"] = 4700, ["WhiteScreen"] = false, ["FPSBoots"] = false, ["AutoServerHop"] = true, ["HopWhenNoBounty"] = true, ["BountyLock"] = false, ["BountyLockAt"] = 30000000, ["ServerHopAfterTime"] = false, ["ServerHopTime"] = 900, ["CheckCombatBeforeHop"] = true, ["MaxPlayersInServer"] = 8},
+    ["Webhook"] = {["Enabled"] = true, ["Url"] = ""}
 }
 
-loadstring(game:HttpGet(
-"https://raw.githubusercontent.com/shinichi-dz/phucshinsayhi/refs/heads/main/AutoBounty.lua"
-))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/shinichi-dz/phucshinsayhi/refs/heads/main/AutoBounty.lua"))()
 </div>
 
 <button onclick="copy('script1')">Copy</button>
 <button onclick="openResumo('auto')">Resumo do Script</button>
-
 <img src="https://upload.wikimedia.org/wikipedia/en/3/3f/Blox_Fruits_Logo.png">
 
 <!-- ================= REDZ HUB ================= -->
 <h2>Redz Hub</h2>
-
 <div class="script-box" id="script2">
-loadstring(game:HttpGet(
-"https://api.luarmor.net/files/v3/loaders/20f318386e3fbf069ee3fa797cfc9f34.lua"
-))()
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/20f318386e3fbf069ee3fa797cfc9f34.lua"))()
 </div>
 
 <button onclick="copy('script2')">Copy</button>
 <button onclick="openResumo('redz')">Resumo do Script</button>
-
 <img src="https://upload.wikimedia.org/wikipedia/en/3/3f/Blox_Fruits_Logo.png">
 
 <!-- ================= GRAVITY HUB ================= -->
 <h2>Gravity Hub Lite</h2>
-
 <div class="script-box" id="script3">
-loadstring(game:HttpGet(
-"https://raw.githubusercontent.com/Dev-GravityHub/BloxFruit/refs/heads/main/Main.lua"
-))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Dev-GravityHub/BloxFruit/refs/heads/main/Main.lua"))()
 </div>
 
 <button onclick="copy('script3')">Copy</button>
 <button onclick="openResumo('gravity')">Resumo do Script</button>
-
 <img src="https://upload.wikimedia.org/wikipedia/en/3/3f/Blox_Fruits_Logo.png">
 
 <script>
 function copy(id) {
-    navigator.clipboard.writeText(
-        document.getElementById(id).innerText
-    );
+    navigator.clipboard.writeText(document.getElementById(id).innerText);
     alert("Script copiado!");
 }
 
 function openResumo(tipo) {
     let texto = "";
-
-    if (tipo === "auto") {
+    if(tipo === "auto") {
         texto = `
 🔥 AUTO BOUNTY 🔥
 
 🎯 Objetivo:
-Farmar bounty automaticamente no Blox Fruits.
+O Auto Bounty é um script para farmar bounty automaticamente no Blox Fruits.
 
 🔍 Caça automática:
-Procura jogadores automaticamente.
+Procura jogadores para ganhar bounty.
 
-⚔️ Combate:
-Usa Melee, Sword, Gun e Fruit.
+⚔️ Combate automático:
+Utiliza Melee, Sword, Gun e Fruit para lutar.
 
-🛡️ Proteções:
-Evita Safe Zone, No PvP e No Haki.
+🛡️ Proteção:
+Evita confrontos em Safe Zones e com jogadores sem PvP.
 
 🌍 Troca de servidor:
-Muda de servidor se não houver bounty.
+Muda de servidor automaticamente se necessário.
 
-🔄 Extras:
-Suporte V3 e V4, controle de vida e segurança.
+🔄 Configurações avançadas:
+Inclui suporte para V3 e V4, e personalização de saúde.
 `;
     }
-
-    if (tipo === "redz") {
+    if(tipo === "redz") {
         texto = `
 🔥 REDZ HUB 🔥
 
 🎯 Objetivo:
-Evoluir sua conta rapidamente.
+O Redz Hub é um hub completo para evolução da conta.
 
-📈 Farm de nível automático
-🗺️ Teleporte entre ilhas
-📜 Missões automáticas
-👹 Farm de bosses
-🍎 Farm de frutas
+📈 Farm de nível:
+Aumenta o nível do jogador automaticamente.
+
+🗺️ Teleporte:
+Leva o jogador a diferentes ilhas e NPCs.
+
+🏆 Missões automáticas:
+Aceita e completa quests sem intervenção.
+
+👹 Farm de bosses:
+Derrota bosses automaticamente.
+
+🍎 Farm de frutas:
+Coleta frutas sem precisar interagir.
 `;
     }
-
-    if (tipo === "gravity") {
+    if(tipo === "gravity") {
         texto = `
 🔥 GRAVITY HUB 🔥
 
 🎯 Objetivo:
-Otimizar e acelerar o progresso.
+O Gravity Hub é um hub completo para Blox Fruits, focado em otimizar e acelerar o progresso do jogador.
 
-📈 Farm de nível
-🗺️ Teleporte inteligente
-📜 Missões automáticas
-👹 Farm de bosses
-🛠️ Customização avançada
-🧭 Exploração estratégica
+📈 Farm de Nível:
+Aumenta o nível do personagem de forma automática, eliminando inimigos e completando missões sem intervenção manual.
+
+🗺️ Teleporte Inteligente:
+Permite teletransportar-se entre ilhas, NPCs e locais de interesse, facilitando a navegação e economizando tempo.
+
+📜 Missões Automáticas:
+Aceita e completa missões sem que o jogador precise interagir, garantindo um progresso contínuo.
+
+👹 Farm de Bosses:
+Derrota bosses automaticamente, ajudando a coletar recompensas valiosas e a evoluir mais rápido.
+
+🛠️ Customização Avançada:
+Oferece diversas opções de personalização, como configuração de habilidades e ajustes de desempenho.
+
+🧭 Exploração e Estratégia:
+Facilita a exploração do mundo de Blox Fruits, permitindo uma abordagem estratégica para otimizar o progresso.
+
+Resumo Visual:
+📈 Farm de Nível
+🗺️ Teleporte
+📜 Missões Automáticas
+👹 Farm de Bosses
+🛠️ Customização
+🧭 Exploração
 `;
     }
 
     let w = window.open("", "_blank");
-    w.document.write(`
-        <body style="background:black;color:white;font-family:Arial;padding:20px">
-        <button onclick="window.close()">⬅ Voltar</button>
-        <pre>${texto}</pre>
-        </body>
-    `);
+    w.document.write(`<body style="background:black;color:white;font-family:Arial;padding:20px">
+<button onclick="window.close()">⬅ Voltar</button>
+<pre>${texto}</pre></body>`);
 }
 </script>
 
