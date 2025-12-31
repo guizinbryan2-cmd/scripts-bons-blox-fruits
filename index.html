@@ -1,78 +1,91 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scripts bons para Blox Fruits</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scripts Blox Fruits</title>
 
-    <style>
-        body {
-            background-color: #0b4fd6;
-            font-family: Arial, sans-serif;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
+<style>
+body {
+    background-color: #0b4fd6;
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
 
-        h1, h2 {
-            margin-bottom: 15px;
-        }
+.script-box {
+    background-color: #0a3fa8;
+    border-radius: 10px;
+    padding: 15px;
+    max-width: 900px;
+    margin: 20px auto;
+    text-align: left;
+    white-space: pre;
+    overflow-x: auto;
+    font-size: 14px;
+}
 
-        .script-box {
-            background-color: #0a3fa8;
-            border-radius: 10px;
-            padding: 15px;
-            max-width: 900px;
-            margin: 20px auto;
-            text-align: left;
-            overflow-x: auto;
-            white-space: pre;
-            font-size: 14px;
-        }
+button {
+    margin: 8px;
+    padding: 10px 20px;
+    background: #111;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
 
-        .copy-btn {
-            margin-top: 10px;
-            padding: 10px 25px;
-            background-color: #111;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 16px;
-        }
+button:hover {
+    background: black;
+}
 
-        .copy-btn:hover {
-            background-color: #000;
-        }
-
-        .game-img {
-            margin-top: 25px;
-            width: 220px;
-            height: 220px;
-            object-fit: cover;
-            border-radius: 10px;
-        }
-    </style>
+img {
+    margin-top: 20px;
+    width: 300px;
+    border-radius: 10px;
+}
+</style>
 </head>
 
 <body>
 
-<h1>Scripts bons para Blox Fruits</h1>
+<h1>🔥 Scripts Blox Fruits 🔥</h1>
 
-<!-- SCRIPT 1 -->
+<!-- ================= AUTO BOUNTY ================= -->
 <h2>Auto Bounty</h2>
 
 <div class="script-box" id="script1">
+repeat wait() until game:IsLoaded()
+getgenv().Setting = {
+    ["Team"] = "Pirates",
+    ["Chat"] = {},
+    ["Skip Race V4"] = true,
+
+    ["Melee"] = {["Enable"] = true},
+    ["Sword"] = {["Enable"] = true},
+    ["Gun"] = {["Enable"] = true},
+    ["Fruit"] = {["Enable"] = true},
+
+    ["Another"] = {
+        ["V3"] = true,
+        ["V4"] = true,
+        ["AutoServerHop"] = true
+    }
+}
+
 loadstring(game:HttpGet(
 "https://raw.githubusercontent.com/shinichi-dz/phucshinsayhi/refs/heads/main/AutoBounty.lua"
 ))()
 </div>
 
-<button class="copy-btn" onclick="copy('script1')">Copy</button>
-<img class="game-img" src="https://i.imgur.com/7yUvePI.png" alt="Blox Fruits">
+<button onclick="copy('script1')">Copy</button>
+<button onclick="openResumo('auto')">Resumo do Script</button>
 
-<!-- SCRIPT 2 -->
-<h2>Redz Hub (OFICIAL - Luarmor)</h2>
+<img src="https://upload.wikimedia.org/wikipedia/en/3/3f/Blox_Fruits_Logo.png">
+
+<!-- ================= REDZ HUB ================= -->
+<h2>Redz Hub</h2>
 
 <div class="script-box" id="script2">
 loadstring(game:HttpGet(
@@ -80,11 +93,13 @@ loadstring(game:HttpGet(
 ))()
 </div>
 
-<button class="copy-btn" onclick="copy('script2')">Copy</button>
-<img class="game-img" src="https://i.imgur.com/7yUvePI.png" alt="Blox Fruits">
+<button onclick="copy('script2')">Copy</button>
+<button onclick="openResumo('redz')">Resumo do Script</button>
 
-<!-- SCRIPT 3 -->
-<h2>Gravity Hub Lite (Farm Level, Otimizado)</h2>
+<img src="https://upload.wikimedia.org/wikipedia/en/3/3f/Blox_Fruits_Logo.png">
+
+<!-- ================= GRAVITY HUB ================= -->
+<h2>Gravity Hub Lite</h2>
 
 <div class="script-box" id="script3">
 loadstring(game:HttpGet(
@@ -92,15 +107,84 @@ loadstring(game:HttpGet(
 ))()
 </div>
 
-<button class="copy-btn" onclick="copy('script3')">Copy</button>
-<img class="game-img" src="https://i.imgur.com/7yUvePI.png" alt="Blox Fruits">
+<button onclick="copy('script3')">Copy</button>
+<button onclick="openResumo('gravity')">Resumo do Script</button>
+
+<img src="https://upload.wikimedia.org/wikipedia/en/3/3f/Blox_Fruits_Logo.png">
 
 <script>
 function copy(id) {
-    const text = document.getElementById(id).innerText;
-    navigator.clipboard.writeText(text).then(() => {
-        alert("Script copiado com sucesso!");
-    });
+    navigator.clipboard.writeText(
+        document.getElementById(id).innerText
+    );
+    alert("Script copiado!");
+}
+
+function openResumo(tipo) {
+    let texto = "";
+
+    if (tipo === "auto") {
+        texto = `
+🔥 AUTO BOUNTY 🔥
+
+🎯 Objetivo:
+Farmar bounty automaticamente no Blox Fruits.
+
+🔍 Caça automática:
+Procura jogadores automaticamente.
+
+⚔️ Combate:
+Usa Melee, Sword, Gun e Fruit.
+
+🛡️ Proteções:
+Evita Safe Zone, No PvP e No Haki.
+
+🌍 Troca de servidor:
+Muda de servidor se não houver bounty.
+
+🔄 Extras:
+Suporte V3 e V4, controle de vida e segurança.
+`;
+    }
+
+    if (tipo === "redz") {
+        texto = `
+🔥 REDZ HUB 🔥
+
+🎯 Objetivo:
+Evoluir sua conta rapidamente.
+
+📈 Farm de nível automático
+🗺️ Teleporte entre ilhas
+📜 Missões automáticas
+👹 Farm de bosses
+🍎 Farm de frutas
+`;
+    }
+
+    if (tipo === "gravity") {
+        texto = `
+🔥 GRAVITY HUB 🔥
+
+🎯 Objetivo:
+Otimizar e acelerar o progresso.
+
+📈 Farm de nível
+🗺️ Teleporte inteligente
+📜 Missões automáticas
+👹 Farm de bosses
+🛠️ Customização avançada
+🧭 Exploração estratégica
+`;
+    }
+
+    let w = window.open("", "_blank");
+    w.document.write(`
+        <body style="background:black;color:white;font-family:Arial;padding:20px">
+        <button onclick="window.close()">⬅ Voltar</button>
+        <pre>${texto}</pre>
+        </body>
+    `);
 }
 </script>
 
