@@ -45,9 +45,11 @@ img {
     width: 300px;
     border-radius: 10px;
 }
+
 .executor-buttons {
     margin-top: 20px;
 }
+
 .executor-buttons button {
     margin: 5px;
 }
@@ -111,6 +113,12 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Dev-GravityHub/BloxFr
 <button onclick="confirmRedirect('Fluxus','https://fluxusexecutor.com.br/')">Fluxus Executor</button>
 <button onclick="confirmRedirect('Hydrogen','https://hydrogenexecutor.com/')">Hydrogen Executor</button>
 <button onclick="confirmRedirect('Codex','https://codexexecutor.net/')">Codex Executor</button>
+</div>
+
+<!-- ================= BOTÃO EXECUTORS ATUALIZADOS ================= -->
+<h2>Executores Atualizados</h2>
+<div class="executor-buttons">
+    <button onclick="openUpdatedExecutors()">Executores Atualizados</button>
 </div>
 
 <script>
@@ -212,6 +220,29 @@ function confirmRedirect(name,url){
     if(confirm(`⚠️ Você será redirecionado para o site do executor ${name}. Deseja continuar?`)){
         window.open(url,"_blank");
     }
+}
+
+function openUpdatedExecutors(){
+    const w = window.open("", "_blank");
+    w.document.write(`
+        <body style="background:black;color:white;font-family:Arial;padding:20px;text-align:center">
+            <h1>⚡ Executores Atualizados ⚡</h1>
+            <p>Clique no executor para ir ao site. Você receberá uma confirmação antes do redirecionamento.</p>
+            <button onclick="confirmRedirect('Delta','https://deltaexploits.gg/delta-executor-android')">Delta Executor</button><br><br>
+            <button onclick="confirmRedirect('Fluxus','https://fluxusexecutor.com.br/')">Fluxus Executor</button><br><br>
+            <button onclick="confirmRedirect('Hydrogen','https://hydrogenexecutor.com/')">Hydrogen Executor</button><br><br>
+            <button onclick="confirmRedirect('Codex','https://codexexecutor.net/')">Codex Executor</button><br><br>
+            <button onclick="window.close()">⬅ Voltar</button>
+
+            <script>
+                function confirmRedirect(name,url){
+                    if(confirm('⚠️ Você será redirecionado para o site do executor ' + name + '. Deseja continuar?')){
+                        window.open(url,'_blank');
+                    }
+                }
+            <\/script>
+        </body>
+    `);
 }
 </script>
 
