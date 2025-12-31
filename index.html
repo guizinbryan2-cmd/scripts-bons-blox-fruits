@@ -45,6 +45,12 @@ img {
     width: 300px;
     border-radius: 10px;
 }
+.executor-buttons {
+    margin-top: 20px;
+}
+.executor-buttons button {
+    margin: 5px;
+}
 </style>
 </head>
 
@@ -98,10 +104,19 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Dev-GravityHub/BloxFr
 <button onclick="openResumo('gravity')">Resumo do Script</button>
 <img src="https://upload.wikimedia.org/wikipedia/en/3/3f/Blox_Fruits_Logo.png">
 
+<!-- ================= EXECUTORS ================= -->
+<h2>Executors Recomendados</h2>
+<div class="executor-buttons">
+<button onclick="confirmRedirect('Delta','https://deltaexploits.gg/delta-executor-android')">Delta Executor</button>
+<button onclick="confirmRedirect('Fluxus','https://fluxusexecutor.com.br/')">Fluxus Executor</button>
+<button onclick="confirmRedirect('Hydrogen','https://hydrogenexecutor.com/')">Hydrogen Executor</button>
+<button onclick="confirmRedirect('Codex','https://codexexecutor.net/')">Codex Executor</button>
+</div>
+
 <script>
 function copy(id) {
     navigator.clipboard.writeText(document.getElementById(id).innerText);
-    alert("Script copiado!");
+    alert("⚠️ Script copiado!");
 }
 
 function openResumo(tipo) {
@@ -191,6 +206,12 @@ Resumo Visual:
     w.document.write(`<body style="background:black;color:white;font-family:Arial;padding:20px">
 <button onclick="window.close()">⬅ Voltar</button>
 <pre>${texto}</pre></body>`);
+}
+
+function confirmRedirect(name,url){
+    if(confirm(`⚠️ Você será redirecionado para o site do executor ${name}. Deseja continuar?`)){
+        window.open(url,"_blank");
+    }
 }
 </script>
 
