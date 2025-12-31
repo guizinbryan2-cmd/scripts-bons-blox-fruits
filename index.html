@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scripts bons para blox fruits</title>
+    <title>Scripts bons para Blox Fruits</title>
 
     <style>
         body {
@@ -14,12 +14,8 @@
             padding: 20px;
         }
 
-        h1 {
-            margin-bottom: 10px;
-        }
-
-        h2 {
-            margin-bottom: 20px;
+        h1, h2 {
+            margin-bottom: 15px;
         }
 
         .script-box {
@@ -27,7 +23,7 @@
             border-radius: 10px;
             padding: 15px;
             max-width: 900px;
-            margin: auto;
+            margin: 20px auto;
             text-align: left;
             overflow-x: auto;
             white-space: pre;
@@ -35,7 +31,7 @@
         }
 
         .copy-btn {
-            margin-top: 15px;
+            margin-top: 10px;
             padding: 10px 25px;
             background-color: #111;
             color: white;
@@ -50,7 +46,7 @@
         }
 
         .game-img {
-            margin-top: 30px;
+            margin-top: 25px;
             width: 220px;
             height: 220px;
             object-fit: cover;
@@ -61,114 +57,52 @@
 
 <body>
 
-    <h1>Scripts bons para blox fruits</h1>
-    <h2>Script Blox Fruits Auto Bounty 👇</h2>
+<h1>Scripts bons para Blox Fruits</h1>
 
-    <div class="script-box" id="scriptText">
-repeat wait() until game:IsLoaded()
+<!-- SCRIPT 1 -->
+<h2>Auto Bounty</h2>
 
-getgenv().Setting = {
-    ["Team"] = "Pirates",
-    ["Chat"] = {},
-    ["Skip Race V4"] = true,
-
-    ["Melee"] = {
-        ["Enable"] = true,
-        ["Z"] = {["Enable"] = true, ["HoldTime"] = 0.1},
-        ["X"] = {["Enable"] = true, ["HoldTime"] = 0.1},
-        ["C"] = {["Enable"] = true, ["HoldTime"] = 0.1},
-        ["Delay"] = 1.5
-    },
-
-    ["Sword"] = {
-        ["Enable"] = true,
-        ["Z"] = {["Enable"] = true, ["HoldTime"] = 0.1},
-        ["X"] = {["Enable"] = true, ["HoldTime"] = 0.1},
-        ["Delay"] = 1
-    },
-
-    ["Gun"] = {
-        ["Enable"] = true,
-        ["Z"] = {["Enable"] = true, ["HoldTime"] = 0.1},
-        ["X"] = {["Enable"] = true, ["HoldTime"] = 0.1},
-        ["Delay"] = 1,
-        ["GunMode"] = false
-    },
-
-    ["Fruit"] = {
-        ["Enable"] = true,
-        ["Z"] = {["Enable"] = true, ["HoldTime"] = 0.1},
-        ["X"] = {["Enable"] = true, ["HoldTime"] = 0.1},
-        ["C"] = {["Enable"] = true, ["HoldTime"] = 0.1},
-        ["V"] = {["Enable"] = true, ["HoldTime"] = 0.1},
-        ["F"] = {["Enable"] = false, ["HoldTime"] = 0.1},
-        ["Delay"] = 1
-    },
-
-    ["Hunt"] = {
-        ["Min"] = 0,
-        ["Max"] = 30000000
-    },
-
-    ["Skip"] = {
-        ["Fruit"] = false,
-        ["FruitList"] = {"Buddha", "Leopard", "T-Rex"},
-        ["SafeZone"] = true,
-        ["NoHaki"] = true,
-        ["NoPvP"] = true
-    },
-
-    ["SafeHealth"] = {
-        ["Health"] = 4700,
-        ["Mask"] = false,
-        ["MaskType"] = "Mask",
-        ["RaceV4"] = false
-    },
-
-    ["Another"] = {
-        ["V3"] = true,
-        ["V4"] = true,
-        ["CustomHealth"] = true,
-        ["Health"] = 4700,
-        ["WhiteScreen"] = false,
-        ["FPSBoots"] = false,
-        ["AutoServerHop"] = true,
-        ["HopWhenNoBounty"] = true,
-        ["BountyLock"] = false,
-        ["BountyLockAt"] = 30000000,
-        ["ServerHopAfterTime"] = false,
-        ["ServerHopTime"] = 900,
-        ["CheckCombatBeforeHop"] = true,
-        ["MaxPlayersInServer"] = 8
-    },
-
-    ["Webhook"] = {
-        ["Enabled"] = true,
-        ["Url"] = ""
-    }
-}
-
+<div class="script-box" id="script1">
 loadstring(game:HttpGet(
-    "https://raw.githubusercontent.com/shinichi-dz/phucshinsayhi/refs/heads/main/AutoBounty.lua"
+"https://raw.githubusercontent.com/shinichi-dz/phucshinsayhi/refs/heads/main/AutoBounty.lua"
 ))()
-    </div>
+</div>
 
-    <button class="copy-btn" onclick="copyScript()">Copy</button>
+<button class="copy-btn" onclick="copy('script1')">Copy</button>
+<img class="game-img" src="https://i.imgur.com/7yUvePI.png" alt="Blox Fruits">
 
-    <br>
+<!-- SCRIPT 2 -->
+<h2>Redz Hub (OFICIAL - Luarmor)</h2>
 
-    <img class="game-img"
-         src="https://i.imgur.com/7yUvePI.png"
-         alt="Blox Fruits">
+<div class="script-box" id="script2">
+loadstring(game:HttpGet(
+"https://api.luarmor.net/files/v3/loaders/20f318386e3fbf069ee3fa797cfc9f34.lua"
+))()
+</div>
 
-    <script>
-        function copyScript() {
-            const text = document.getElementById("scriptText").innerText;
-            navigator.clipboard.writeText(text).then(() => {
-                alert("Script copiado com sucesso!");
-            });
-        }
-    </script>
+<button class="copy-btn" onclick="copy('script2')">Copy</button>
+<img class="game-img" src="https://i.imgur.com/7yUvePI.png" alt="Blox Fruits">
+
+<!-- SCRIPT 3 -->
+<h2>Gravity Hub Lite (Farm Level, Otimizado)</h2>
+
+<div class="script-box" id="script3">
+loadstring(game:HttpGet(
+"https://raw.githubusercontent.com/Dev-GravityHub/BloxFruit/refs/heads/main/Main.lua"
+))()
+</div>
+
+<button class="copy-btn" onclick="copy('script3')">Copy</button>
+<img class="game-img" src="https://i.imgur.com/7yUvePI.png" alt="Blox Fruits">
+
+<script>
+function copy(id) {
+    const text = document.getElementById(id).innerText;
+    navigator.clipboard.writeText(text).then(() => {
+        alert("Script copiado com sucesso!");
+    });
+}
+</script>
 
 </body>
 </html>
