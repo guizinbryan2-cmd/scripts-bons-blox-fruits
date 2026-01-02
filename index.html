@@ -13,7 +13,6 @@ body {
     text-align: center;
     padding: 20px;
 }
-
 .script-box {
     background-color: #0a3fa8;
     border-radius: 10px;
@@ -25,7 +24,6 @@ body {
     overflow-x: auto;
     font-size: 14px;
 }
-
 button {
     margin: 8px;
     padding: 10px 20px;
@@ -35,17 +33,9 @@ button {
     border-radius: 8px;
     cursor: pointer;
 }
-
-button:hover {
-    background: black;
-}
-
-.executor-buttons {
-    margin-top: 20px;
-}
-.executor-buttons button {
-    margin: 5px;
-}
+button:hover { background: black; }
+.executor-buttons { margin-top: 20px; }
+.executor-buttons button { margin: 5px; }
 </style>
 </head>
 
@@ -111,6 +101,13 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/noguchihyuga/script/r
 <button onclick="copy('script8')">Copy</button>
 <button onclick="openResumo('zoyx')">Resumo do Script</button>
 
+<h2>👍 Tsuo Hub 👍</h2>
+<div class="script-box" id="script9">
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Tsuo7/TsuoHub/main/Tsuoscripts"))()
+</div>
+<button onclick="copy('script9')">Copy</button>
+<button onclick="openResumo('tsuo')">Resumo do Script</button>
+
 <h2>Executors Recomendados</h2>
 <div class="executor-buttons">
 <button onclick="confirmRedirect('Delta','https://deltaexploits.gg/delta-executor-android')">Delta Executor</button>
@@ -120,27 +117,22 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/noguchihyuga/script/r
 </div>
 
 <script>
-function copy(id) {
+function copy(id){
     navigator.clipboard.writeText(document.getElementById(id).innerText);
     alert("✅ Script copiado!");
 }
 
-function openResumo(tipo) {
+function openResumo(tipo){
     let texto = "⏳ Resumo em breve...";
-
-    if(tipo === "auto") texto = "🔥 AUTO BOUNTY 🔥\nFarm automático de bounty com suporte V3 e V4.";
-    if(tipo === "redz") texto = "🔥 REDZ HUB 🔥\nAuto farm, quests, bosses e frutas.";
-    if(tipo === "gravity") texto = "🔥 GRAVITY HUB 🔥\nFarm, teleporte e bosses.";
-    if(tipo === "cokka") texto = "⭐️ COKKA HUB ⭐️\nHub completo focado em Race V4.";
-    if(tipo === "night") texto = "🌙 NIGHT HUB 🫠\nResumo em breve...";
-    if(tipo === "chest") texto = "📦 AUTO FARM CHEST 🐦\nResumo em breve...";
-    if(tipo === "quantum") texto = "💡 QUANTUM ONYX HUB 💡\nResumo em breve...";
-    if(tipo === "zoyx") texto = "😈 ZOYX HUB 😈\nHop Server automático para trocar de servidor.";
-
-    let w = window.open("", "_blank");
+    if(tipo==="auto") texto="🔥 AUTO BOUNTY 🔥\nFarm automático de bounty com suporte V3 e V4.";
+    if(tipo==="redz") texto="🔥 REDZ HUB 🔥\nAuto farm, quests, bosses e frutas.";
+    if(tipo==="gravity") texto="🔥 GRAVITY HUB 🔥\nFarm, teleporte e bosses.";
+    if(tipo==="cokka") texto="⭐️ COKKA HUB ⭐️\nHub focado em Race V4.";
+    if(tipo==="zoyx") texto="😈 ZOYX HUB 😈\nResumo em breve...";
+    if(tipo==="tsuo") texto="👍 TSUO HUB 👍\nResumo em breve...";
+    let w=window.open("","_blank");
     w.document.write(`<body style="background:black;color:white;font-family:Arial;padding:20px">
-<button onclick="window.close()">⬅ Voltar</button>
-<pre>${texto}</pre></body>`);
+<button onclick="window.close()">⬅ Voltar</button><pre>${texto}</pre></body>`);
 }
 
 function confirmRedirect(name,url){
