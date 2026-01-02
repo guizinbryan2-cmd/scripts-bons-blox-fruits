@@ -43,7 +43,6 @@ button:hover {
 .executor-buttons {
     margin-top: 20px;
 }
-
 .executor-buttons button {
     margin: 5px;
 }
@@ -105,10 +104,9 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/flazhy/QuantumOnyx/re
 <button onclick="copy('script7')">Copy</button>
 <button onclick="openResumo('quantum')">Resumo do Script</button>
 
-<!-- ZOYX HUB -->
 <h2>😈 Zoyx Hub Atualizado 😈</h2>
 <div class="script-box" id="script8">
-loadstring(game:HttpGet("https://raw.githubusercontent.com/flazhy/QuantumOnyx/refs/heads/main/QuantumOnyx.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/noguchihyuga/script/refs/heads/main/hopserver.lua"))()
 </div>
 <button onclick="copy('script8')">Copy</button>
 <button onclick="openResumo('zoyx')">Resumo do Script</button>
@@ -137,7 +135,7 @@ function openResumo(tipo) {
     if(tipo === "night") texto = "🌙 NIGHT HUB 🫠\nResumo em breve...";
     if(tipo === "chest") texto = "📦 AUTO FARM CHEST 🐦\nResumo em breve...";
     if(tipo === "quantum") texto = "💡 QUANTUM ONYX HUB 💡\nResumo em breve...";
-    if(tipo === "zoyx") texto = "😈 ZOYX HUB 😈\n💡 Resumo em breve...";
+    if(tipo === "zoyx") texto = "😈 ZOYX HUB 😈\nHop Server automático para trocar de servidor.";
 
     let w = window.open("", "_blank");
     w.document.write(`<body style="background:black;color:white;font-family:Arial;padding:20px">
