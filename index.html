@@ -40,12 +40,6 @@ button:hover {
     background: black;
 }
 
-img {
-    margin-top: 20px;
-    width: 300px;
-    border-radius: 10px;
-}
-
 .executor-buttons {
     margin-top: 20px;
 }
@@ -65,30 +59,32 @@ img {
 <div class="script-box" id="script1">
 loadstring(game:HttpGet("https://raw.githubusercontent.com/shinichi-dz/phucshinsayhi/refs/heads/main/AutoBounty.lua"))()
 </div>
-
 <button onclick="copy('script1')">Copy</button>
 <button onclick="openResumo('auto')">Resumo do Script</button>
-<img src="https://upload.wikimedia.org/wikipedia/en/3/3f/Blox_Fruits_Logo.png">
 
 <!-- ================= REDZ HUB ================= -->
 <h2>Redz Hub</h2>
 <div class="script-box" id="script2">
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/20f318386e3fbf069ee3fa797cfc9f34.lua"))()
 </div>
-
 <button onclick="copy('script2')">Copy</button>
 <button onclick="openResumo('redz')">Resumo do Script</button>
-<img src="https://upload.wikimedia.org/wikipedia/en/3/3f/Blox_Fruits_Logo.png">
 
 <!-- ================= GRAVITY HUB ================= -->
 <h2>Gravity Hub Lite</h2>
 <div class="script-box" id="script3">
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Dev-GravityHub/BloxFruit/refs/heads/main/Main.lua"))()
 </div>
-
 <button onclick="copy('script3')">Copy</button>
 <button onclick="openResumo('gravity')">Resumo do Script</button>
-<img src="https://upload.wikimedia.org/wikipedia/en/3/3f/Blox_Fruits_Logo.png">
+
+<!-- ================= COKKA HUB ================= -->
+<h2>⭐️ Cokka Hub Atualizado ⭐️</h2>
+<div class="script-box" id="script4">
+loadstring(game:HttpGet("https://raw.githubusercontent.com/UserDevEthical/Loadstring/main/CokkaHub.lua"))()
+</div>
+<button onclick="copy('script4')">Copy</button>
+<button onclick="openResumo('cokka')">Resumo do Script</button>
 
 <!-- ================= EXECUTORS ================= -->
 <h2>Executors Recomendados</h2>
@@ -102,43 +98,67 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Dev-GravityHub/BloxFr
 <script>
 function copy(id) {
     navigator.clipboard.writeText(document.getElementById(id).innerText);
-    alert("⚠️ Script copiado!");
+    alert("✅ Script copiado!");
 }
 
 function openResumo(tipo) {
     let texto = "";
+
     if(tipo === "auto") {
-        texto = `
-🔥 AUTO BOUNTY 🔥
-
-🎯 Objetivo:
-O Auto Bounty é um script para farmar bounty automaticamente no Blox Fruits.
-
-⚔️ Combate automático
-🌍 Troca de servidor
-🛡️ Proteções
-🧬 Suporte V3 e V4
-`;
+        texto = `🔥 AUTO BOUNTY 🔥
+Farm automático de bounty com combate, proteção e troca de servidor.
+Suporte V3 e V4.`;
     }
+
     if(tipo === "redz") {
-        texto = `
-🔥 REDZ HUB 🔥
-
-📈 Farm de nível
-📜 Auto quest
-👹 Farm de bosses
-🍎 Farm de frutas
-`;
+        texto = `🔥 REDZ HUB 🔥
+Auto farm, quests, bosses e frutas.`;
     }
-    if(tipo === "gravity") {
-        texto = `
-🔥 GRAVITY HUB 🔥
 
-📈 Farm de level
-🗺️ Teleporte
-📜 Missões automáticas
-👹 Bosses
-`;
+    if(tipo === "gravity") {
+        texto = `🔥 GRAVITY HUB 🔥
+Farm de level, teleportes e bosses.`;
+    }
+
+    if(tipo === "cokka") {
+        texto = `⭐️ COKKA HUB ATUALIZADO ⭐️
+(Blox Fruits – Roblox)
+
+🎯 Objetivo do Script
+Hub completo para acelerar o progresso no Blox Fruits, ideal para desbloquear a Race V4.
+
+⚔️ Auto Farm de Level
+Derrota inimigos automaticamente para ganhar XP rápido.
+
+📜 Auto Quest
+Aceita e completa missões automaticamente.
+
+🗺️ Teleportes Rápidos
+Ilhas, NPCs, bosses e locais importantes.
+
+👹 Farm de Bosses
+Facilita a coleta de itens raros.
+
+🍎 Farm de Frutas
+Localiza e coleta frutas automaticamente.
+
+📦 Farm de Baús
+Abre baús para ganhar Beli e recompensas.
+
+🌌 Ilha da Miragem
+Ajuda a encontrar a Mirage Island.
+
+🧬 Race V4 – Trial & Evolução
+Auxilia nos trials e evolução da V4.
+
+🔥 Ideal para V4
+Perfeito para quem quer desbloquear e evoluir a Race V4.
+
+🔍 ESP / Localização
+Mostra inimigos, frutas e objetos.
+
+⚙️ Interface Simples
+Menu fácil e rápido de usar.`;
     }
 
     let w = window.open("", "_blank");
@@ -148,7 +168,7 @@ O Auto Bounty é um script para farmar bounty automaticamente no Blox Fruits.
 }
 
 function confirmRedirect(name,url){
-    if(confirm(\`⚠️ Você será redirecionado para o site do executor \${name}. Deseja continuar?\`)){
+    if(confirm(`⚠️ Você será redirecionado para o site do executor ${name}. Deseja continuar?`)){
         window.open(url,"_blank");
     }
 }
