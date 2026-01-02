@@ -104,6 +104,14 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/trongdeptraihucscript
 <button onclick="copy('script6')">Copy</button>
 <button onclick="openResumo('chest')">Resumo do Script</button>
 
+<!-- QUANTUM ONYX HUB -->
+<h2>💡 Quantum Onyx Hub Atualizado 💡</h2>
+<div class="script-box" id="script7">
+loadstring(game:HttpGet("https://raw.githubusercontent.com/flazhy/QuantumOnyx/refs/heads/main/QuantumOnyx.lua"))()
+</div>
+<button onclick="copy('script7')">Copy</button>
+<button onclick="openResumo('quantum')">Resumo do Script</button>
+
 <!-- EXECUTORS -->
 <h2>Executors Recomendados</h2>
 <div class="executor-buttons">
@@ -128,6 +136,7 @@ function openResumo(tipo) {
     if(tipo === "cokka") texto = "⭐️ COKKA HUB ⭐️\nHub completo focado em Race V4.";
     if(tipo === "night") texto = "🌙 NIGHT HUB 🫠\nResumo em breve...";
     if(tipo === "chest") texto = "📦 AUTO FARM CHEST 🐦\nResumo em breve...";
+    if(tipo === "quantum") texto = "💡 QUANTUM ONYX HUB 💡\nResumo em breve...";
 
     let w = window.open("", "_blank");
     w.document.write(`<body style="background:black;color:white;font-family:Arial;padding:20px">
