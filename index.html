@@ -54,7 +54,6 @@ button:hover {
 
 <h1>🔥 Scripts Blox Fruits 🔥</h1>
 
-<!-- AUTO BOUNTY -->
 <h2>Auto Bounty</h2>
 <div class="script-box" id="script1">
 loadstring(game:HttpGet("https://raw.githubusercontent.com/shinichi-dz/phucshinsayhi/refs/heads/main/AutoBounty.lua"))()
@@ -62,7 +61,6 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/shinichi-dz/phucshins
 <button onclick="copy('script1')">Copy</button>
 <button onclick="openResumo('auto')">Resumo do Script</button>
 
-<!-- REDZ HUB -->
 <h2>Redz Hub</h2>
 <div class="script-box" id="script2">
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/20f318386e3fbf069ee3fa797cfc9f34.lua"))()
@@ -70,7 +68,6 @@ loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/20f318386e3fbf
 <button onclick="copy('script2')">Copy</button>
 <button onclick="openResumo('redz')">Resumo do Script</button>
 
-<!-- GRAVITY HUB -->
 <h2>Gravity Hub Lite</h2>
 <div class="script-box" id="script3">
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Dev-GravityHub/BloxFruit/refs/heads/main/Main.lua"))()
@@ -78,7 +75,6 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Dev-GravityHub/BloxFr
 <button onclick="copy('script3')">Copy</button>
 <button onclick="openResumo('gravity')">Resumo do Script</button>
 
-<!-- COKKA HUB -->
 <h2>⭐️ Cokka Hub Atualizado ⭐️</h2>
 <div class="script-box" id="script4">
 loadstring(game:HttpGet("https://raw.githubusercontent.com/UserDevEthical/Loadstring/main/CokkaHub.lua"))()
@@ -86,7 +82,6 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/UserDevEthical/Loadst
 <button onclick="copy('script4')">Copy</button>
 <button onclick="openResumo('cokka')">Resumo do Script</button>
 
-<!-- NIGHT HUB -->
 <h2>🌙 Night Hub Freemium Atualizado 🫠</h2>
 <div class="script-box" id="script5">
 loadstring(game:HttpGet("https://raw.githubusercontent.com/WhiteX1208/Scripts/refs/heads/main/BF-Beta.lua"))()
@@ -94,7 +89,6 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/WhiteX1208/Scripts/re
 <button onclick="copy('script5')">Copy</button>
 <button onclick="openResumo('night')">Resumo do Script</button>
 
-<!-- AUTO FARM CHEST -->
 <h2>📦 Auto Farm Chest / Baús Atualizado 🐦</h2>
 <div class="script-box" id="script6">
 repeat wait() until game:IsLoaded() and game.Players.LocalPlayer
@@ -104,7 +98,6 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/trongdeptraihucscript
 <button onclick="copy('script6')">Copy</button>
 <button onclick="openResumo('chest')">Resumo do Script</button>
 
-<!-- QUANTUM ONYX HUB -->
 <h2>💡 Quantum Onyx Hub Atualizado 💡</h2>
 <div class="script-box" id="script7">
 loadstring(game:HttpGet("https://raw.githubusercontent.com/flazhy/QuantumOnyx/refs/heads/main/QuantumOnyx.lua"))()
@@ -112,7 +105,14 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/flazhy/QuantumOnyx/re
 <button onclick="copy('script7')">Copy</button>
 <button onclick="openResumo('quantum')">Resumo do Script</button>
 
-<!-- EXECUTORS -->
+<!-- ZOYX HUB -->
+<h2>😈 Zoyx Hub Atualizado 😈</h2>
+<div class="script-box" id="script8">
+loadstring(game:HttpGet("https://raw.githubusercontent.com/flazhy/QuantumOnyx/refs/heads/main/QuantumOnyx.lua"))()
+</div>
+<button onclick="copy('script8')">Copy</button>
+<button onclick="openResumo('zoyx')">Resumo do Script</button>
+
 <h2>Executors Recomendados</h2>
 <div class="executor-buttons">
 <button onclick="confirmRedirect('Delta','https://deltaexploits.gg/delta-executor-android')">Delta Executor</button>
@@ -137,6 +137,7 @@ function openResumo(tipo) {
     if(tipo === "night") texto = "🌙 NIGHT HUB 🫠\nResumo em breve...";
     if(tipo === "chest") texto = "📦 AUTO FARM CHEST 🐦\nResumo em breve...";
     if(tipo === "quantum") texto = "💡 QUANTUM ONYX HUB 💡\nResumo em breve...";
+    if(tipo === "zoyx") texto = "😈 ZOYX HUB 😈\n💡 Resumo em breve...";
 
     let w = window.open("", "_blank");
     w.document.write(`<body style="background:black;color:white;font-family:Arial;padding:20px">
