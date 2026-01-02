@@ -54,7 +54,7 @@ button:hover {
 
 <h1>🔥 Scripts Blox Fruits 🔥</h1>
 
-<!-- ================= AUTO BOUNTY ================= -->
+<!-- AUTO BOUNTY -->
 <h2>Auto Bounty</h2>
 <div class="script-box" id="script1">
 loadstring(game:HttpGet("https://raw.githubusercontent.com/shinichi-dz/phucshinsayhi/refs/heads/main/AutoBounty.lua"))()
@@ -62,7 +62,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/shinichi-dz/phucshins
 <button onclick="copy('script1')">Copy</button>
 <button onclick="openResumo('auto')">Resumo do Script</button>
 
-<!-- ================= REDZ HUB ================= -->
+<!-- REDZ HUB -->
 <h2>Redz Hub</h2>
 <div class="script-box" id="script2">
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/20f318386e3fbf069ee3fa797cfc9f34.lua"))()
@@ -70,7 +70,7 @@ loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/20f318386e3fbf
 <button onclick="copy('script2')">Copy</button>
 <button onclick="openResumo('redz')">Resumo do Script</button>
 
-<!-- ================= GRAVITY HUB ================= -->
+<!-- GRAVITY HUB -->
 <h2>Gravity Hub Lite</h2>
 <div class="script-box" id="script3">
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Dev-GravityHub/BloxFruit/refs/heads/main/Main.lua"))()
@@ -78,7 +78,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Dev-GravityHub/BloxFr
 <button onclick="copy('script3')">Copy</button>
 <button onclick="openResumo('gravity')">Resumo do Script</button>
 
-<!-- ================= COKKA HUB ================= -->
+<!-- COKKA HUB -->
 <h2>⭐️ Cokka Hub Atualizado ⭐️</h2>
 <div class="script-box" id="script4">
 loadstring(game:HttpGet("https://raw.githubusercontent.com/UserDevEthical/Loadstring/main/CokkaHub.lua"))()
@@ -86,7 +86,25 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/UserDevEthical/Loadst
 <button onclick="copy('script4')">Copy</button>
 <button onclick="openResumo('cokka')">Resumo do Script</button>
 
-<!-- ================= EXECUTORS ================= -->
+<!-- NIGHT HUB -->
+<h2>🌙 Night Hub Freemium Atualizado 🫠</h2>
+<div class="script-box" id="script5">
+loadstring(game:HttpGet("https://raw.githubusercontent.com/WhiteX1208/Scripts/refs/heads/main/BF-Beta.lua"))()
+</div>
+<button onclick="copy('script5')">Copy</button>
+<button onclick="openResumo('night')">Resumo do Script</button>
+
+<!-- AUTO FARM CHEST -->
+<h2>📦 Auto Farm Chest / Baús Atualizado 🐦</h2>
+<div class="script-box" id="script6">
+repeat wait() until game:IsLoaded() and game.Players.LocalPlayer
+getgenv().Team = "Marines"
+loadstring(game:HttpGet("https://raw.githubusercontent.com/trongdeptraihucscript/Main/refs/heads/main/TN-Tp-Chest.lua"))()
+</div>
+<button onclick="copy('script6')">Copy</button>
+<button onclick="openResumo('chest')">Resumo do Script</button>
+
+<!-- EXECUTORS -->
 <h2>Executors Recomendados</h2>
 <div class="executor-buttons">
 <button onclick="confirmRedirect('Delta','https://deltaexploits.gg/delta-executor-android')">Delta Executor</button>
@@ -102,64 +120,14 @@ function copy(id) {
 }
 
 function openResumo(tipo) {
-    let texto = "";
+    let texto = "⏳ Resumo em breve...";
 
-    if(tipo === "auto") {
-        texto = `🔥 AUTO BOUNTY 🔥
-Farm automático de bounty com combate, proteção e troca de servidor.
-Suporte V3 e V4.`;
-    }
-
-    if(tipo === "redz") {
-        texto = `🔥 REDZ HUB 🔥
-Auto farm, quests, bosses e frutas.`;
-    }
-
-    if(tipo === "gravity") {
-        texto = `🔥 GRAVITY HUB 🔥
-Farm de level, teleportes e bosses.`;
-    }
-
-    if(tipo === "cokka") {
-        texto = `⭐️ COKKA HUB ATUALIZADO ⭐️
-(Blox Fruits – Roblox)
-
-🎯 Objetivo do Script
-Hub completo para acelerar o progresso no Blox Fruits, ideal para desbloquear a Race V4.
-
-⚔️ Auto Farm de Level
-Derrota inimigos automaticamente para ganhar XP rápido.
-
-📜 Auto Quest
-Aceita e completa missões automaticamente.
-
-🗺️ Teleportes Rápidos
-Ilhas, NPCs, bosses e locais importantes.
-
-👹 Farm de Bosses
-Facilita a coleta de itens raros.
-
-🍎 Farm de Frutas
-Localiza e coleta frutas automaticamente.
-
-📦 Farm de Baús
-Abre baús para ganhar Beli e recompensas.
-
-🌌 Ilha da Miragem
-Ajuda a encontrar a Mirage Island.
-
-🧬 Race V4 – Trial & Evolução
-Auxilia nos trials e evolução da V4.
-
-🔥 Ideal para V4
-Perfeito para quem quer desbloquear e evoluir a Race V4.
-
-🔍 ESP / Localização
-Mostra inimigos, frutas e objetos.
-
-⚙️ Interface Simples
-Menu fácil e rápido de usar.`;
-    }
+    if(tipo === "auto") texto = "🔥 AUTO BOUNTY 🔥\nFarm automático de bounty com suporte V3 e V4.";
+    if(tipo === "redz") texto = "🔥 REDZ HUB 🔥\nAuto farm, quests, bosses e frutas.";
+    if(tipo === "gravity") texto = "🔥 GRAVITY HUB 🔥\nFarm, teleporte e bosses.";
+    if(tipo === "cokka") texto = "⭐️ COKKA HUB ⭐️\nHub completo focado em Race V4.";
+    if(tipo === "night") texto = "🌙 NIGHT HUB 🫠\nResumo em breve...";
+    if(tipo === "chest") texto = "📦 AUTO FARM CHEST 🐦\nResumo em breve...";
 
     let w = window.open("", "_blank");
     w.document.write(`<body style="background:black;color:white;font-family:Arial;padding:20px">
