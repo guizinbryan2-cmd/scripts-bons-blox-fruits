@@ -40,6 +40,12 @@ button:hover {
     background: black;
 }
 
+img {
+    margin-top: 20px;
+    width: 300px;
+    border-radius: 10px;
+}
+
 .executor-buttons {
     margin-top: 20px;
 }
@@ -57,96 +63,41 @@ button:hover {
 <!-- ================= AUTO BOUNTY ================= -->
 <h2>Auto Bounty</h2>
 <div class="script-box" id="script1">
-repeat wait() until game:IsLoaded()
-
-getgenv().Setting = {
-    ["Team"] = "Pirates",
-    ["Chat"] = {},
-    ["Skip Race V4"] = true,
-
-    ["Melee"] = {
-        ["Enable"] = true,
-        ["Z"] = {["Enable"] = true, ["HoldTime"] = 0.1},
-        ["X"] = {["Enable"] = true, ["HoldTime"] = 0.1},
-        ["C"] = {["Enable"] = true, ["HoldTime"] = 0.1},
-        ["Delay"] = 1.5
-    },
-
-    ["Sword"] = {
-        ["Enable"] = true,
-        ["Z"] = {["Enable"] = true, ["HoldTime"] = 0.1},
-        ["X"] = {["Enable"] = true, ["HoldTime"] = 0.1},
-        ["Delay"] = 1
-    },
-
-    ["Gun"] = {
-        ["Enable"] = true,
-        ["Z"] = {["Enable"] = true, ["HoldTime"] = 0.1},
-        ["X"] = {["Enable"] = true, ["HoldTime"] = 0.1},
-        ["Delay"] = 1,
-        ["GunMode"] = false
-    },
-
-    ["Fruit"] = {
-        ["Enable"] = true,
-        ["Z"] = {["Enable"] = true, ["HoldTime"] = 0.1},
-        ["X"] = {["Enable"] = true, ["HoldTime"] = 0.1},
-        ["C"] = {["Enable"] = true, ["HoldTime"] = 0.1},
-        ["V"] = {["Enable"] = true, ["HoldTime"] = 0.1},
-        ["F"] = {["Enable"] = false, ["HoldTime"] = 0.1},
-        ["Delay"] = 1
-    },
-
-    ["Hunt"] = {
-        ["Min"] = 0,
-        ["Max"] = 30000000
-    },
-
-    ["Skip"] = {
-        ["Fruit"] = false,
-        ["FruitList"] = {"Buddha", "Leopard", "T-Rex"},
-        ["SafeZone"] = true,
-        ["NoHaki"] = true,
-        ["NoPvP"] = true
-    },
-
-    ["SafeHealth"] = {
-        ["Health"] = 4700,
-        ["Mask"] = false,
-        ["MaskType"] = "Mask",
-        ["RaceV4"] = false
-    },
-
-    ["Another"] = {
-        ["V3"] = true,
-        ["V4"] = true,
-        ["CustomHealth"] = true,
-        ["Health"] = 4700,
-        ["WhiteScreen"] = false,
-        ["FPSBoots"] = false,
-        ["AutoServerHop"] = true,
-        ["HopWhenNoBounty"] = true,
-        ["BountyLock"] = false,
-        ["BountyLockAt"] = 30000000,
-        ["ServerHopAfterTime"] = false,
-        ["ServerHopTime"] = 900,
-        ["CheckCombatBeforeHop"] = true,
-        ["MaxPlayersInServer"] = 8
-    },
-
-    ["Webhook"] = {
-        ["Enabled"] = true,
-        ["Url"] = ""
-    }
-}
-
-loadstring(game:HttpGet(
-"https://raw.githubusercontent.com/shinichi-dz/phucshinsayhi/refs/heads/main/AutoBounty.lua"
-))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/shinichi-dz/phucshinsayhi/refs/heads/main/AutoBounty.lua"))()
 </div>
 
 <button onclick="copy('script1')">Copy</button>
 <button onclick="openResumo('auto')">Resumo do Script</button>
+<img src="https://upload.wikimedia.org/wikipedia/en/3/3f/Blox_Fruits_Logo.png">
+
+<!-- ================= REDZ HUB ================= -->
+<h2>Redz Hub</h2>
+<div class="script-box" id="script2">
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/20f318386e3fbf069ee3fa797cfc9f34.lua"))()
+</div>
+
+<button onclick="copy('script2')">Copy</button>
+<button onclick="openResumo('redz')">Resumo do Script</button>
+<img src="https://upload.wikimedia.org/wikipedia/en/3/3f/Blox_Fruits_Logo.png">
+
+<!-- ================= GRAVITY HUB ================= -->
+<h2>Gravity Hub Lite</h2>
+<div class="script-box" id="script3">
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Dev-GravityHub/BloxFruit/refs/heads/main/Main.lua"))()
+</div>
+
+<button onclick="copy('script3')">Copy</button>
+<button onclick="openResumo('gravity')">Resumo do Script</button>
+<img src="https://upload.wikimedia.org/wikipedia/en/3/3f/Blox_Fruits_Logo.png">
+
+<!-- ================= EXECUTORS ================= -->
+<h2>Executors Recomendados</h2>
+<div class="executor-buttons">
+<button onclick="confirmRedirect('Delta','https://deltaexploits.gg/delta-executor-android')">Delta Executor</button>
+<button onclick="confirmRedirect('Fluxus','https://fluxusexecutor.com.br/')">Fluxus Executor</button>
+<button onclick="confirmRedirect('Hydrogen','https://hydrogenexecutor.com/')">Hydrogen Executor</button>
+<button onclick="confirmRedirect('Codex','https://codexexecutor.net/')">Codex Executor</button>
+</div>
 
 <script>
 function copy(id) {
@@ -156,22 +107,50 @@ function copy(id) {
 
 function openResumo(tipo) {
     let texto = "";
-
     if(tipo === "auto") {
-        texto = `🔥 AUTO BOUNTY 🔥
+        texto = `
+🔥 AUTO BOUNTY 🔥
 
-⚔️ Farm automático de bounty
-🌍 Server Hop inteligente
-🧬 Suporte completo à Race V4
-🔫 Gun, Sword, Melee e Fruit ativados
-🛡️ Sistema de proteção e Safe Zone
-🚀 Ideal para quem quer evoluir rápido`;
+🎯 Objetivo:
+O Auto Bounty é um script para farmar bounty automaticamente no Blox Fruits.
+
+⚔️ Combate automático
+🌍 Troca de servidor
+🛡️ Proteções
+🧬 Suporte V3 e V4
+`;
+    }
+    if(tipo === "redz") {
+        texto = `
+🔥 REDZ HUB 🔥
+
+📈 Farm de nível
+📜 Auto quest
+👹 Farm de bosses
+🍎 Farm de frutas
+`;
+    }
+    if(tipo === "gravity") {
+        texto = `
+🔥 GRAVITY HUB 🔥
+
+📈 Farm de level
+🗺️ Teleporte
+📜 Missões automáticas
+👹 Bosses
+`;
     }
 
     let w = window.open("", "_blank");
     w.document.write(`<body style="background:black;color:white;font-family:Arial;padding:20px">
 <button onclick="window.close()">⬅ Voltar</button>
 <pre>${texto}</pre></body>`);
+}
+
+function confirmRedirect(name,url){
+    if(confirm(\`⚠️ Você será redirecionado para o site do executor \${name}. Deseja continuar?\`)){
+        window.open(url,"_blank");
+    }
 }
 </script>
 
